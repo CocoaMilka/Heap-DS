@@ -1,0 +1,60 @@
+Heap DS:
+
+Member Variables:
+
+	- root
+
+		Contains root node of the heap
+
+	- size
+
+		Contains number of nodes
+
+Operations:
+
+	- Heapify()
+
+		Ensure heap condition: parent >= children (max heap, opposite for min heap)
+
+		- MaxHeapify()
+
+		- MinHeapify()
+
+	- Insert()
+
+		Add an element to the end of the heap
+
+	- Remove()
+
+		Remove an element from the end of the heap
+
+	- ArrayToHeap()
+
+		Converts an array into a heap
+
+	- HeapToArray()
+
+		Converts a heap into an array
+
+	- PrintHeap()
+
+		Start at root node
+
+
+
+
+
+Node:
+
+Member Variables:
+
+	- value
+
+		Holds value stored in node
+
+	- Children nodes
+
+		- left
+
+		- right
+
