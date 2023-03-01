@@ -1,33 +1,19 @@
 from heap import *
 
-a = Node(1)
+a = Heap()
 
-b = Node(2)
-c = Node(3)
+a.insert(1)
+a.insert(2)
+a.insert(3)
+a.insert(4)
+a.insert(5)
+a.insert(6)
+a.insert(7)
 
-d = Node(4)
-e = Node(5)
+print("Parent: ", a.parent(2))
+print("Left child value: ", a.left(2))
+print("Right child value: ", a.right(2))
 
-f = Node(6)
-g = Node(7)
+print("Number of elements: ", a.size())
 
-a.left = b
-a.right = c
-
-b.left = d
-b.right = e
-
-c.left = f
-c.right = g
-
-print("Left child value: ", a.left.value)
-print("Right child value: ", a.right.value)
-
-print("Left child value: ", b.left.value)
-print("Right child value: ", b.right.value)
-
-h = Heap()
-
-h.root = a
-
-h.PrintHeap(h.root)
+a.printHeap()
