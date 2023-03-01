@@ -10,10 +10,28 @@ a.insert(5)
 a.insert(6)
 a.insert(7)
 
-print("Parent: ", a.parent(2))
-print("Left child value: ", a.left(2))
-print("Right child value: ", a.right(2))
+node = 5
+
+#print("Parent: ", a.parent(node))
+#print("Current Node: ", a.current(node))
+#print("Left child value: ", a.left(node))
+#print("Right child value: ", a.right(node))
+
+a.printHeap()
+
+a.buildMaxHeap()
+
+print("New heap:")
+
+a.printHeap()
 
 print("Number of elements: ", a.size())
 
-a.printHeap()
+"""
+if a.hasLeftChild(node):
+    print(str(a.current(node)) + " has a left child")
+else:
+    print(str(a.current(node)) + " has no left child")
+"""
+
+#a.printHeap()
