@@ -15,20 +15,15 @@ class Node:
 class Heap:
 
     # Member Variables
-    root = None
+    heap = []
     size = 0
 
-    def Insert(self, r):
-        if root == None:
-            root = r
+    # Insert element to end of heap
+    def Insert(self, x):
+        heap.append(x)
+        size += 1
 
-    def PrintHeap(self, r):
-
-        if r.left != None:
-            print(r.left.value)
-
-        if r.right != None:
-            print(r.right.value)
-
-        # def Heapify(self):
-        # Heapify
+    # Removes last element in heap
+    def Remove(self):
+        heap.pop()
+        size -= 1
