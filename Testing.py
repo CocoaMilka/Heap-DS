@@ -2,12 +2,15 @@ from heap import *
 
 a = Heap()
 
-a.insert(1)
-a.insert(2)
-a.insert(3)
 a.insert(4)
-a.insert(5)
-a.insert(6)
+a.insert(1)
+a.insert(3)
+a.insert(2)
+a.insert(16)
+a.insert(9)
+a.insert(10)
+a.insert(14)
+a.insert(8)
 a.insert(7)
 
 node = 5
@@ -19,11 +22,19 @@ node = 5
 
 a.printHeap()
 
-a.buildMaxHeap()
+print("###")
 
-print("New heap:")
+#a.buildMaxHeap()
+a.maxHeapSort()
 
-a.printHeap()
+print("Sorted: ")
+
+for i in a.sorted:
+    print(i)
+
+#print("New heap:")
+
+#a.printHeap()
 
 print("Number of elements: ", a.size())
 

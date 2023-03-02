@@ -9,6 +9,8 @@ class Heap:
     heap = []
     numElements = 0
 
+    sorted = []
+
     # Insert element to end of heap
     def insert(self, x):
         self.heap.append(x)
@@ -50,9 +52,18 @@ class Heap:
             self.maxHeapify(largest)
 
     def buildMaxHeap(self):
-        for i in range(math.floor(self.numElements / 2), 0, -1):
+        for i in range(math.floor(self.numElements / 2), -1, -1):
             self.maxHeapify(i)
 
+    def maxHeapSort(self):
+        self.buildMaxHeap()
+
+        for i in range(self.numElements - 1, -1, -1):
+            self.heap[0], self.heap[i] = self.heap[i], self.heap[0]
+            self.numElements -= 1
+            self.maxHeapify(0)
+
+            self.sorted.append(self.heap[i])
 
     # Accessors
     def current(self, x):
