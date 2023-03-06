@@ -11,6 +11,10 @@ class Heap:
 
     sorted = []
 
+    def __init__(self, array):
+        for i in array:
+            self.insert(i)
+
     # Insert element to end of heap
     def insert(self, x):
         self.heap.append(x)
@@ -63,7 +67,7 @@ class Heap:
             self.numElements -= 1
             self.maxHeapify(0)
 
-            self.sorted.append(self.heap[i])
+            self.sorted.insert(0, self.heap[i])
 
     # Accessors
     def current(self, x):

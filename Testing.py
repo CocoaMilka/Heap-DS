@@ -1,17 +1,8 @@
 from heap import *
 
-a = Heap()
+array = [1, 7, 8, 9, 10, 12, 5, 1, 5, 2, 5, 7, 12, 19]
 
-a.insert(4)
-a.insert(1)
-a.insert(3)
-a.insert(2)
-a.insert(16)
-a.insert(9)
-a.insert(10)
-a.insert(14)
-a.insert(8)
-a.insert(7)
+a = Heap(array)
 
 node = 5
 
@@ -31,18 +22,5 @@ print("Sorted: ")
 
 for i in a.sorted:
     print(i)
-
-#print("New heap:")
-
-#a.printHeap()
-
-print("Number of elements: ", a.size())
-
-"""
-if a.hasLeftChild(node):
-    print(str(a.current(node)) + " has a left child")
-else:
-    print(str(a.current(node)) + " has no left child")
-"""
 
 #a.printHeap()
